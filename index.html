@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>🇹🇭 ไทยแลนด์สู้เว้ยยยย</title>
-        <script>
-            var thaiNumber =["๐","๑","๒","๓","๔","๕","๖","๗","๘","๙"];
 
-            function convertNumberToThai(){
-                var originalText = document.getElementById("original").value;
-                var i = 0;
-                thaiNumber.forEach(element => {
-                    originalText = originalText.replace(new RegExp(i, 'g'), element);
-                    i++;
-                });
-                document.getElementById("converted").value = originalText;
-            }
-            
-        </script>
-    </head>
-    <body>
-        <center>
+<head>
+    <title>🇹🇭 ไทยแลนด์สู้เว้ยยยย</title>
+    <script>
+        var thaiNumber = ["๐", "๑", "๒", "๓", "๔", "๕", "๖", "๗", "๘", "๙"];
+
+        function convertNumberToThai() {
+            var originalText = document.getElementById("original").value;
+            var i = 0;
+            thaiNumber.forEach(element => {
+                originalText = originalText.replace(new RegExp(i, 'g'), element);
+                i++;
+            });
+            document.getElementById("converted").value = originalText;
+        }
+
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container text-center">
+        <!-- Content here -->
+        <h1>🇹🇭 แปลงเลขไทยง่าย ๆ เพื่ออนุรักษ์วัฒนธรรมแบบสุด ๆ</h1>
+        <div class="row">
+            <div class="col">
+                <textarea class="form-control" id="original" oninput="convertNumberToThai()" rows="30" cols="50"></textarea>
+            </div>
+            <div class="col">
+                <textarea class="form-control" id="converted" disabled rows="30" cols="50"></textarea>
+            </div>
+        </div>
+    </div>
+    <!--center>
             <h1>🇹🇭 แปลงเลขไทยง่าย ๆ เพื่ออนุรักษ์วัฒนธรรมแบบสุด ๆ</h1>
-            <textarea id="original" oninput="convertNumberToThai()" rows="30" cols="50"></textarea>
-            <textarea id="converted" disabled rows="30" cols="50"></textarea>
-        </center>
-    </body>
+            <textarea class="form-control" id="original" oninput="convertNumberToThai()" rows="30" cols="50"></textarea>
+            <textarea class="form-control" id="converted" disabled rows="30" cols="50"></textarea>
+        </center-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
